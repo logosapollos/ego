@@ -113,6 +113,7 @@ enum
 	MSPARC64,
 	MAMD64,
 	MPOWER64,
+	MEPIPHANY, 
 				/* types of executables */
 	FNONE = 0,		/* unidentified */
 	FMIPS,			/* v.out */
@@ -143,6 +144,8 @@ enum
 	FPOWER64,		/* 9.out */
 	FPOWER64B,		/* 9.out bootable */
 	FWINPE,			/* windows PE executable */
+	FEPIPHANY, 		/* e.out */
+	FEPIPHANYB, 	/* e.out bootable */
 
 	ANONE = 0,		/* dissembler types */
 	AMIPS,
@@ -160,6 +163,7 @@ enum
 	ASPARC64,
 	AAMD64,
 	APOWER64,
+	AEPIPHANY, 
 				/* object file types */
 	Obj68020 = 0,		/* .2 */
 	ObjSparc,		/* .k */
@@ -177,6 +181,7 @@ enum
 	ObjAmd64,		/* .6 */
 	ObjSpim,		/* .0 */
 	ObjPower64,		/* .9 */
+	ObjEpiphany		/* .e */
 	Maxobjtype,
 
 	CNONE  = 0,		/* symbol table classes */
