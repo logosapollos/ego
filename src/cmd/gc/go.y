@@ -37,9 +37,9 @@ static void fixlbrace(int);
 // |sed 's/.*	//' |9 fmt -l1 |sort |9 fmt -l50 | sed 's/^/%xxx		/'
 
 %token	<val>	LLITERAL
-%token	<i>	LASOP LCOLAS
+%token	<i>		LASOP LCOLAS
 %token	<sym>	LBREAK LCASE LCHAN LCONST LCONTINUE LDDD
-%token	<sym>	LDEFAULT LDEFER LELSE LFALL LFOR LFUNC LGO LGOTO
+%token	<sym>	LDEFAULT LDEFER LEGO LELSE LFALL LFOR LFUNC LGO  LGOTO
 %token	<sym>	LIF LIMPORT LINTERFACE LMAP LNAME
 %token	<sym>	LPACKAGE LRANGE LRETURN LSELECT LSTRUCT LSWITCH
 %token	<sym>	LTYPE LVAR
@@ -47,7 +47,7 @@ static void fixlbrace(int);
 %token		LANDAND LANDNOT LBODY LCOMM LDEC LEQ LGE LGT
 %token		LIGNORE LINC LLE LLSH LLT LNE LOROR LRSH
 
-%type	<i>	lbrace import_here
+%type	<i>		lbrace import_here
 %type	<sym>	sym packname
 %type	<val>	oliteral
 
@@ -1716,6 +1716,10 @@ non_dcl_stmt:
 		$$ = nod(OCONTINUE, $2, N);
 	}
 |	LGO pseudocall
+	{
+		$$ = nod(OPROC, $2, N);
+	}
+|	LEGO pseudocall
 	{
 		$$ = nod(OPROC, $2, N);
 	}
