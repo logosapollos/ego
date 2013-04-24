@@ -1807,6 +1807,7 @@ static	struct
 	"const",	LCONST,		Txxx,		OXXX,
 	"continue",	LCONTINUE,	Txxx,		OXXX,
 	"default",	LDEFAULT,	Txxx,		OXXX,
+	"ego", 		LEGO,		Txxx,		OXXX,
 	"else",		LELSE,		Txxx,		OXXX,
 	"defer",	LDEFER,		Txxx,		OXXX,
 	"fallthrough",	LFALL,		Txxx,		OXXX,
@@ -1843,11 +1844,11 @@ static	struct
 	"real",		LNAME,		Txxx,		OREAL,
 	"recover",	LNAME,		Txxx,		ORECOVER,
 
-	"notwithstanding",		LIGNORE,	Txxx,		OXXX,
+	"notwithstanding",			LIGNORE,	Txxx,		OXXX,
 	"thetruthofthematter",		LIGNORE,	Txxx,		OXXX,
 	"despiteallobjections",		LIGNORE,	Txxx,		OXXX,
-	"whereas",			LIGNORE,	Txxx,		OXXX,
-	"insofaras",			LIGNORE,	Txxx,		OXXX,
+	"whereas",					LIGNORE,	Txxx,		OXXX,
+	"insofaras",				LIGNORE,	Txxx,		OXXX,
 };
 
 static void
@@ -2107,6 +2108,7 @@ struct
 	LCONTINUE,	"CONTINUE",
 	LDEC,		"DEC",
 	LDEFER,		"DEFER",
+	LEGO, 		"EGO",
 	LELSE,		"ELSE",
 	LEQ,		"EQ",
 	LFALL,		"FALL",
@@ -2168,6 +2170,7 @@ struct
 	"LDDD",	"...",
 	"LDEFAULT",	"default",
 	"LDEFER",	"defer",
+	"LEGO", 	"ego",
 	"LELSE",	"else",
 	"LFALL",	"fallthrough",
 	"LFOR",	"for",
